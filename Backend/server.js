@@ -16,7 +16,14 @@ connectDatabase()
 const app = express() ;
 
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    {
+        origin: ["https://deploy-mern-1whq.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
+mongoose.connect('mongodb+srv://chinnu:chinnu7@mycluster.uxvwz.mongodb.net/blog?retryWrites=true&w=majority&appName=MyCluster')
 
 app.use("/",IndexRoute)
 
