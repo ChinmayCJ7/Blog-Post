@@ -25,6 +25,10 @@ app.use(cors(
 ));
 mongoose.connect('mongodb+srv://chinnu:chinnu7@mycluster.uxvwz.mongodb.net/blog?retryWrites=true&w=majority&appName=MyCluster');
 
+app.get("/", (req, res) => {
+res.json("Hello");
+})
+
 app.use("/",IndexRoute)
 
 app.use(customErrorHandler)
