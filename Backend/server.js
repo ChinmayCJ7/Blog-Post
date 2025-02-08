@@ -23,7 +23,7 @@ app.use(cors(
         credentials: true
     }
 ));
-mongoose.connect('mongodb+srv://chinnu:chinnu7@mycluster.uxvwz.mongodb.net/blog?retryWrites=true&w=majority&appName=MyCluster')
+mongoose.connect('mongodb+srv://chinnu:chinnu7@mycluster.uxvwz.mongodb.net/blog?retryWrites=true&w=majority&appName=MyCluster');
 
 app.use("/",IndexRoute)
 
